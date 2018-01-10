@@ -4,7 +4,14 @@ window.onload = function (){
   function Controller(){
     var elem = document.getElementById("app").getElementsByTagName("p");
     elem[0].innerText = ("howdy")
-    console.log(elem)
+  }
+
+  Controller.prototype.getList = function(list){
+    var note = new Note();
+    note.addNote("Favourite drink: seltzer");
+    var view = new View(list);
+    view.returnHTML();
+
   }
   exports.Controller = Controller;
 

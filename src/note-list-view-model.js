@@ -6,9 +6,8 @@
 
   View.prototype.returnHTML = function () {
    string = ""
-   for (var i=0; i < this.list.notes.length; i ++){
-
-     string += "<li><div>" + this.list.notes[i].text + "</div></li>";
+   for (var i=0; i < this.list.returnNotes().length; i ++){
+     string += "<li><div>" + this.list.returnNotes()[i].text + "</div></li>";
    };
    return "<ul>" + string + "</ul>"
   };

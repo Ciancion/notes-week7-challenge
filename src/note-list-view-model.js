@@ -9,10 +9,9 @@
    string = ""
 
    for (var i=0; i < this.list.returnNotes().length; i ++){
-     console.log(this.list.returnNotes()[i].text.slice(0, 20))
-     string += "<li><div>" + this.list.returnNotes()[i].text.slice(0, 5) + "</div></li>";
+     string += "<li><div>" + this.list.returnNotes()[i].text.slice(0, 20) + "</div></li>";
 
-
+   console.log(string)
 
    };
    return "<ul>" + string + "</ul>"

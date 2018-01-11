@@ -16,12 +16,11 @@ function testForReturnHTMLNote(){
 };
 testForReturnHTMLNote();
 
-function testForReturnFirt20HTMLNote(){
+function testForReturnFirst20HTMLNote(){
   var list = new List();
+  list.createAndAddNote("Hello 123456789 123456789")
   var view = new View(list);
-  var note = new Note("Hello");
 
-  list.addNote(note);
-  assert.isTrue(view.returnHTML() === "<ul><li><div>Hello 123456789 123456789</div></li></ul>", "Shows only the first 20 characters of each note");
+  assert.isTrue(view.returnHTML() === "<ul><li><div>Hello 123456789 1234</div></li></ul>", "Shows only the first 20 characters of each note");
 };
-testForReturnFirt20HTMLNote();
+testForReturnFirst20HTMLNote();

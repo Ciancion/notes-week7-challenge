@@ -1,11 +1,16 @@
 function testReturnSingleNote(){
   var list = new List();
-  list.createAndAddNote("Bye bye!");
-  list.createAndAddNote("Valentina :)");
-  var note = list.returnNotes()[1]
-  var singleView = new SingleView(note)
+  var noteDouble = new NoteDouble
+  var singleView = new SingleView(noteDouble);
 
-  assert.isTrue(singleView.returnSingleNoteHTML() === "<ul><li><div>Valentina :)</div></li></ul>", "Views a single note from a list");
+  list.addNote(noteDouble)
+
+  function NoteDouble() {
+    this.id = 1
+    this.text = "12345678901234567890this bit shouldn't appear"
+  }
+
+  assert.isTrue(singleView.returnSingleNoteHTML() === "<ul><li><a href='#1'>12345678901234567890</a></li></li></ul>", "Views a single note from a list");
 
 
 }

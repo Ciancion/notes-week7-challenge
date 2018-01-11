@@ -5,9 +5,11 @@
 
   SingleView.prototype.returnSingleNoteHTML = function () {
    var singleNote = this.note;
-   string = "<li><div>" + singleNote.text + "</div></li>";
-   return "<ul>" + string + "</ul>"
+   // console.log(singleNote)
+   return "<ul><li><a href='#" + singleNote.id + "'>" + singleNote.text.slice(0, 20) + "</a></li>"  +
+   "</li></ul>"
   };
+
 
   exports.SingleView = SingleView;
 })(this);

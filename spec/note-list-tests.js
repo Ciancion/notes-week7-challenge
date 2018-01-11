@@ -5,7 +5,7 @@ function testAddNote(){
 
   list.addNote(note);
 
-  assert.isTrue(list.notes[0] === note);
+  assert.isTrue(list.notes[0] === note, "Tests that the note is added to the list");
 
 };
 testAddNote();
@@ -37,8 +37,8 @@ function testReturnNotesText(){
   list.addNote(note);
   list.addNote(note2);
 
-  assert.isTrue(note.text === "Hello");
-  assert.isTrue(note2.text === "Val");
+  assert.isTrue(note.text === "Hello", "Return the Note1 text");
+  assert.isTrue(note2.text === "Val", "Return the Note2 text");
 
 };
 

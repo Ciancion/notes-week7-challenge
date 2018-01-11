@@ -5,7 +5,7 @@ function testReturnSingleNote(){
   var note = list.returnNotes()[1]
   var singleView = new SingleView(note)
 
-  assert.isTrue(singleView.returnSingleNoteHTML() === "<ul><li><div>Valentina :)</div></li></ul>", "View a single note from a list");
+  assert.isTrue(singleView.returnSingleNoteHTML() === "<ul><li><div>Valentina :)</div></li></ul>", "Views a single note from a list");
 
 
 }

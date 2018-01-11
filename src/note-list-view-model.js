@@ -5,17 +5,10 @@
   }
 
   View.prototype.returnHTML = function () {
+    return "<ul>" +
+    this.list.returnNotes().map( note => "<li><a href='#" + note.id + "'>" + note.text.slice(0, 20) + "</a></li>" ).join("") +
+    "</li></ul>"
+    }
 
-   string = ""
-
-   for (var i=0; i < this.list.returnNotes().length; i ++){
-     string += "<li><div>" + this.list.returnNotes()[i].text.slice(0, 20) + "</div></li>";
-
-
-   };
-   return "<ul>" + string + "</ul>"
-  };
-
-
-  exports.View = View;
-})(this);
+    exports.View = View;
+  })(this);

@@ -3,7 +3,7 @@ function testInitialize() {
   list.createAndAddNote("Hello Vale");
   var controller = new Controller(list);
 
-  assert.isTrue(controller instanceof Controller, "Check controller is an istance of Controller")
+  assert.isTrue(controller instanceof Controller, "Checks that controller is an istance of Controller")
 
 }
 
@@ -27,7 +27,7 @@ function testInnerHTML(){
   var html = controller.view.returnHTML();
   controller.getList('app');
 
-  assert.isTrue(document.getElementById('app').innerHTML  === html, "GetList contains the list HTML")
+  assert.isTrue(document.getElementById('app').innerHTML  === html, "Returns the list in HTML")
 }
 
 

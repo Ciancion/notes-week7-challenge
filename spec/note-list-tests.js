@@ -37,8 +37,8 @@ function testReturnNotesText(){
   list.addNote(note);
   list.addNote(note2);
 
-  assert.isTrue(note.text === "Hello", "Return the Note1 text");
-  assert.isTrue(note2.text === "Val", "Return the Note2 text");
+  assert.isTrue(note.text === "Hello", "Returns the Note1 text");
+  assert.isTrue(note2.text === "Val", "Returns the Note2 text");
 
 };
 

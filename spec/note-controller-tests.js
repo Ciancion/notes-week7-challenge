@@ -17,7 +17,7 @@ function testInnerHTML(){
 
   var ViewDouble = function(){
     ViewDouble.prototype.returnHTML = function(){
-      return "<ul><li><div>Favourite food: pesto</div></li></ul>"
+      return "<ul><li><div>Fav food: pesto</div></li></ul>"
     }
   }
 
@@ -25,7 +25,6 @@ function testInnerHTML(){
   var view = new ViewDouble();
   var controller = new Controller(list, view);
   var html = controller.view.returnHTML();
-  controller.getList('app');
 
   assert.isTrue(document.getElementById('app').innerHTML  === html, "GetList contains the list HTML")
 }

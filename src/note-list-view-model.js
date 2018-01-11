@@ -5,9 +5,15 @@
   }
 
   View.prototype.returnHTML = function () {
+
    string = ""
+
    for (var i=0; i < this.list.returnNotes().length; i ++){
-     string += "<li><div>" + this.list.returnNotes()[i].text + "</div></li>";
+     console.log(this.list.returnNotes()[i].text.slice(0, 20))
+     string += "<li><div>" + this.list.returnNotes()[i].text.slice(0, 5) + "</div></li>";
+
+
+
    };
    return "<ul>" + string + "</ul>"
   };

@@ -5,7 +5,7 @@
 
   SingleView.prototype.returnSingleNoteHTML = function () {
    var singleNote = this.note;
-   // console.log(singleNote)
+   console.log(singleNote.id)
    return "<ul><li><a href='#" + singleNote.id + "'>" + singleNote.text.slice(0, 20) + "</a></li>"  +
    "</li></ul>"
   };

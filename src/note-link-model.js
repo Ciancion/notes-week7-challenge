@@ -1,4 +1,3 @@
-makeUrlChangeShowNoteForCurrentPage();
 
 function makeUrlChangeShowNoteForCurrentPage() {
   window.addEventListener("hashchange", showNoteForCurrentPage);
@@ -13,9 +12,7 @@ function getNoteIDFromUrl(location) {
 };
 
 function showNote(noteID) {
-
-  console.log(controller.list.notes[noteID])
   var singleView = new SingleView(controller.list.notes[noteID])
   document.getElementById("app")
-    .innerHTML = singleView.returnSingleNoteHTML();
+  .innerHTML = singleView.returnSingleNoteHTML();
 };

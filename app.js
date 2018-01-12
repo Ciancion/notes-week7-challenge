@@ -3,6 +3,7 @@ window.onload = function (){
   controller.list.createAndAddNote("Hello!!");
   controller.list.createAndAddNote("Hello Valentina !!!!!");
   controller.getList("app");
-
+  makeUrlChangeShowNoteForCurrentPage()
+  listenToSubmit()
 
 };

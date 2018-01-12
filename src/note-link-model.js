@@ -5,6 +5,7 @@ function makeUrlChangeShowNoteForCurrentPage() {
 
 function showNoteForCurrentPage() {
   showNote(getNoteIDFromUrl(window.location));
+
 };
 
 function getNoteIDFromUrl(location) {
@@ -12,9 +13,17 @@ function getNoteIDFromUrl(location) {
 };
 
 function showNote(noteID) {
-
   var singleView = new SingleView(controller.list.notes[noteID])
-  document.getElementById("app")
-  .innerHTML = singleView.returnSingleNoteHTML();
-
+  document
+  .getElementById("app")
+  .innerHTML = singleView.returnSingleNoteText();
 };
+
+function listenToSubmit(){
+  document.getElementById("text").addEventListener("submit", function(evt){
+    evt.preventDefault();
+    controller.list.createAndAddNote(document.getElementById("note").value)
+    controller.getList("app")
+
+  })
+}

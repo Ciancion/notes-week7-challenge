@@ -11,6 +11,10 @@
   Note.prototype.getID = function(){
     return this.id
   }
+
+  Note.prototype.getText = function(){
+    return this.text
+  }
   exports.Note = Note;
 
 })(this);

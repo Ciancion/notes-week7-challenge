@@ -4,7 +4,7 @@
   function Note(string) {
     this.text = string;
     this.id = idCounter;
-    idCounter += 1
+    idCounter ++
 
   };
 

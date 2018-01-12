@@ -12,7 +12,9 @@ function getNoteIDFromUrl(location) {
 };
 
 function showNote(noteID) {
+
   var singleView = new SingleView(controller.list.notes[noteID])
   document.getElementById("app")
   .innerHTML = singleView.returnSingleNoteHTML();
+
 };

@@ -10,7 +10,7 @@ function testReturnSingleNote(){
     this.text = "12345678901234567890this bit shouldn't appear"
   }
 
-  assert.isTrue(singleView.returnSingleNoteHTML() === "<ul><li><a href='#1'>12345678901234567890</a></li></li></ul>", "Views a single note from a list");
+  assert.isTrue(singleView.returnSingleNoteHTML() === "<li><a href='#1'>12345678901234567890</a></li>", "Views a single note from a list");
 
 
 }
